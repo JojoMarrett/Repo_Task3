@@ -11,21 +11,22 @@ count = 0
 
 
 while True:
-    num_loopy = input("Enter a number or enter -1 to stop: ")
-    if num_loopy == "-1":
+    user_input = input("Enter a number or enter -1 to stop: ")
+    if user_input == "-1":
          break
     try:
-        num_entered = float(num_loopy)
+        number = float(user_input)
     
     except ValueError:
         print ("Invalid, please enster a valid number")
 
-total += num_entered
+total += number
 count += 1
   
-if count > -1:
+if count > 0:
         print("Programme stopped")
-
         average = total / count # calculate average
-
+       
         print(f"The average of entered numbers is: {average}") # print the average
+else:
+        print("no valid numbers were entered. Cannot calculate an average.")
